@@ -1,19 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BaseMenu />
+    <img alt="Vue logo" src="./assets/UK.png" />
+    <BaseSearchArea msg="..." />
+    <BaseListArea />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseSearchArea from "./components/BaseSearchArea.vue";
+//import BaseListArea from "./components/BaseListArea.vue";
+import BaseMenu from "./components/BaseMenu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    BaseMenu,
+    BaseSearchArea,
+    //BaseListArea,
+  },
+};
 </script>
 
 <style>
@@ -23,6 +29,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55;
 }
 </style>
